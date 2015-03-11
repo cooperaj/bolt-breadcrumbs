@@ -7,7 +7,8 @@
         "breadcrumb"
     ],
     "require": {
-        "bolt/bolt": ">=2.0.0,<3.0.0"
+        "bolt/bolt": ">=2.0.0,<3.0.0",
+        "cooperaj/bolt-menucompat": "dev-master"
     },
     "license": "MIT",
     "authors": [
