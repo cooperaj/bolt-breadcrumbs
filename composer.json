@@ -1,5 +1,5 @@
 {
-    "name": "cooperaj/bolt-menubreadcrumb",
+    "name": "cooperaj/bolt-breadcrumbs",
     "description": "Renders a breadcrumb based on your menu",
     "type": "bolt-extension",
     "keywords" : [

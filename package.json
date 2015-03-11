@@ -1,5 +1,5 @@
 {
-    "name": "bolt-breadcrumb",
+    "name": "bolt-breadcrumbs",
     "version": "0.1.0",
     "description": "Renders a breadcrumb based on your menu",
     "scripts": {
