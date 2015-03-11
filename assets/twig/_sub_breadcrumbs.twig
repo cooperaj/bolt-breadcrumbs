@@ -1,0 +1,38 @@
+{% set route = app.request.get('_route') %}
+{% set routeparams = app.request.get('_route_params') %}
+
+<ul class="breadcrumbs hide-for-small">
+
+    {% if route == 'homepage' %}
+        <li class="current"><a href="{{ paths.root }}">Home</a></li>
+    {% else %}
+        <li><a href="{{ paths.root }}">Home</a></li>
+
+        {% if route == 'pagebinding' %}
+            <li class="unavailable"><a href="javascript:void(0)">{{ routeparams.slug }}</a></li>
+        {% elseif route == 'contentlisting' %}
+            <li class="unavailable"><a href="javascript:void(0)">{{ routeparams.contenttypeslug }}</a></li>
+        {% elseif route == 'taxonomylink' %}
+            <li class="unavailable"><a href="javascript:void(0)">{{ taxonomy.options[routeparams.slug] }}</a></li>
+        {% elseif route == 'contentlink' %}
+
+            {% if record.taxonomy is not null %}
+                {% if record.taxonomy|keys|first == 'roles' %}
+                    <li class="current"><a href="/{{ record.contenttype.slug }}">{{ record.contenttype.slug }}</a></li>
+                    <li class="unavailable"><a href="javascript:void(0)">{{ routeparams.contenttypeslug }}</a></li>
+                {% else %}
+                    <li><a href="{{ record.taxonomy|first|keys|first }}">{{ record.taxonomy|first|first }}</a></li>
+                    <li class="unavailable"><a href="javascript:void(0)">{{ record.contenttype.slug }}</a></li>
+                {% endif %}
+            {% endif %}
+
+        {% endif %}
+    {% endif %}
+
+</ul>
+
+{{ dump(route) }}
+{{ dump(routeparams) }}
+{{ dump(menu) }}
+{{ dump(record) }}
+{{ dump(app.request) }}
