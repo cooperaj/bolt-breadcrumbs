@@ -65,7 +65,7 @@ class BreadcrumbExtension extends \Twig_Extension
      */
     public function twigBreadcrumb($identifier, $template = '_sub_breadcrumb.twig')
     {
-        /** @var \Bolt\Menu $resolvedMenu */
+        /** @var \Bolt\Helpers\Menu $resolvedMenu */
         $resolvedMenu = $this->app['menu']->menu($identifier);
 
         $breadcrumb = new Breadcrumb($this->app, $resolvedMenu);
