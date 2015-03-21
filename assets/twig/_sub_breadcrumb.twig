@@ -1,0 +1,13 @@
+<ul class="breadcrumbs">
+
+    {% if route == 'homepage' %}
+        <li class="current"><a href="{{ paths.root }}">Home</a></li>
+    {% else %}
+        <li><a href="{{ paths.root }}">Home</a></li>
+    {% endif %}
+
+    {% for crumb in breadcrumb %}
+        <li{% if crumb.current %} class="active"{% endif %}><a href="{{ crumb.link }}">{{ crumb.label }}</a></li>
+    {% endfor %}
+
+</ul>
