@@ -18,7 +18,7 @@ class Breadcrumb extends \ArrayObject
         $this->route_params = $app['request']->get('_route_params');
 
         $breadcrumb = $this->initialise($menu);
-        $this->exchangeArray($breadcrumb);
+        $this->exchangeArray($breadcrumb ?: array());
     }
 
     protected function initialise(Menu $menu)
