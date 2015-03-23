@@ -3,7 +3,7 @@
 namespace Bolt\Extension\Cooperaj\Breadcrumb;
 
 use Bolt\Application;
-use Bolt\Menu;
+use Bolt\Helpers\Menu;
 
 class Breadcrumb extends \ArrayObject
 {
