@@ -7,13 +7,12 @@
         "breadcrumb"
     ],
     "require": {
-        "bolt/bolt": ">=2.0.0,<3.0.0",
-        "cooperaj/bolt-menucompat": "dev-master"
+        "bolt/bolt": ">=2.0.0,<3.0.0"
     },
     "license": "MIT",
     "authors": [
         {
-            "name": "Adam Cooper", 
+            "name": "Adam Cooper",
             "email": "adam@networkpie.co.uk"
         }
     ],
